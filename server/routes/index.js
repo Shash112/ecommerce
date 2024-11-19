@@ -23,6 +23,9 @@ const searchProductController = require('../controller/product/searchProductCont
 const getCategoryWiseProductController = require('../controller/product/getCategoryWiseProductController');
 const getCategoryProductOneController = require('../controller/product/getCategoryProductOneController');
 
+router.get('/',(req, res)=> {
+    res.send("Connected")
+})
 router.post('/signup', userSignUpController);
 router.post('/login', userLoginController);
 router.get('/user-details',authToken ,userDetailsController);
